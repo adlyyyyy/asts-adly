@@ -1,0 +1,31 @@
+public class TesJava {
+    public static void main(String[] args) {
+        Laptop myLaptop = new Laptop("Asus", 16);
+        System.out.println("Merek: " + myLaptop.merek);
+        System.out.println("Kapasitas RAM: " + myLaptop.getRam() + "GB");
+    }
+}
+
+class PerangkatElektronik {
+    public String merek;
+    private int ram;
+
+    PerangkatElektronik(String merek, int ram) {
+        this.merek = merek;
+        this.ram = ram;
+    }
+
+    public int getRam() {
+        return this.ram;
+    }
+
+    public void setRam(int ram) {
+        this.ram = ram;
+    }
+}
+
+class Laptop extends PerangkatElektronik {
+    public Laptop(String merek, int ram) {
+        super(merek, ram);
+    }
+}
