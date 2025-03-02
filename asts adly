@@ -7,25 +7,28 @@ public class TesJava {
 }
 
 class PerangkatElektronik {
-    public String merek;
-    private int ram;
+    public String merek; // Access modifier: Public
+    private int ram; // Access modifier: Private
 
     PerangkatElektronik(String merek, int ram) {
         this.merek = merek;
         this.ram = ram;
     }
 
+    // GETTER
     public int getRam() {
         return this.ram;
     }
 
+    // SETTER
     public void setRam(int ram) {
         this.ram = ram;
     }
 }
 
+// Inheritance
 class Laptop extends PerangkatElektronik {
     public Laptop(String merek, int ram) {
-        super(merek, ram);
+        super(merek, ram); // super constructor
     }
 }
